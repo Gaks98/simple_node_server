@@ -1,0 +1,19 @@
+{
+  "name": "simple-server",
+  "version": "1.0.0",
+  "description": "a simple web server in node",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Gaks98/simple_node_server.git"
+  },
+  "author": "Yvonne Gakii",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gaks98/simple_node_server/issues"
+  },
+  "homepage": "https://github.com/Gaks98/simple_node_server#readme"
+}
