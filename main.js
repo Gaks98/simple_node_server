@@ -11,8 +11,11 @@ const port = 3000,
  =====================================================================
  *2. Create the server with request and response parameters.
  =====================================================================
+
+ * Next, you use the http variable as a reference to the HTTP module to create a server, using that module’s createServer function, and store the resulting server in a variable called app.
+
  */
-  /* Next, you use the http variable as a reference to the HTTP module to create a server, using that module’s createServer function, and store the resulting server in a variable called app.*/
+  
   app = http.createServer((request, response) => {
     console.log("Received an incoming request!");
     /*
@@ -29,11 +32,26 @@ const port = 3000,
 =====================================================================
 *3 Write the response to the client.
 =====================================================================
+
+* You’re writing a line of HTML in the response with write and closing the response with end.  
+* You must end your response with end to tell the server that you’re no longer writing content.
+* Not doing so leaves the connection with the client open, preventing the client from receiving the response.
 */
     let responseMessage = "<h1>Hello Universe!</h1>";
     response.write(responseMessage);
     response.end();
     console.log(`Sent a response : ${responseMessage}`);
   });
+
+  /*
+  =======================================================================================
+  * 4. Tell the application server to listen on port 3000.
+  ========================================================================================
+
+  * The last line of code takes the server instance, app, and runs the listen method to indicate that the server is ready for incoming requests at port 3000.
+   */
+
+app.listen(port);
+console.log(`The server has started and is listening for port number ${port}`);
 
 
